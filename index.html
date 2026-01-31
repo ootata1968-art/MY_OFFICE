@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -6,101 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>行政書士タカハシ事務所（準備中）</title>
     <style>
-        body { text-align: center; font-family: sans-serif; background-color: #f4f4f4; padding: 20px; }
-        .container { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 0 10px rgba(0,0,0,0.1); max-width: 500px; margin: auto; }
-        img { max-width: 100%; border-radius: 10px; }
-        .contact-box { margin-top: 30px; padding: 20px; border: 2px solid #b8860b; border-radius: 10px; text-align: left; }
-        .btn { display: block; width: 100%; padding: 15px; background: #b8860b; color: white; text-decoration: none; border-radius: 5px; text-align: center; font-weight: bold; margin-top: 10px; }
-    </style>
-    <img src="hinode.jpg" alt="日の出の景色">
-</head>
-    <style>
-        body { font-family: 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; background-color: #f9f9f9; }
-        header { background: linear-gradient(135deg, #ff7e5f, #feb47b); color: white; padding: 60px 20px; text-align: center; }
-        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
-        .intro { background: white; padding: 30px; border-radius: 10px; margin-top: -40px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        h2 { border-bottom: 2px solid #ff7e5f; padding-bottom: 10px; color: #e67e22; }
-        .services { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 30px; }
-        .card { background: white; border: 1px solid #ddd; border-radius: 8px; padding: 20px; flex: 1; min-width: 250px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        .card h3 { margin-top: 0; color: #d35400; }
-        .status { font-size: 0.8em; background: #eee; padding: 2px 8px; border-radius: 4px; color: #666; }
-        .note-link { display: block; background: #2c3e50; color: white; text-align: center; padding: 15px; text-decoration: none; border-radius: 5px; margin-top: 40px; font-weight: bold; }
-        .note-link:hover { background: #34495e; }
-        footer { text-align: center; padding: 40px; color: #888; font-size: 0.9em; }
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; line-height: 1.8; color: #333; margin: 0; background-color: #f4f4f4; text-align: center; }
+        
+        /* ヘッダー：あの日の出を背景に */
+        header { 
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                        url('hinode.jpg') center/cover no-repeat;
+            background-color: #b8860b; 
+            color: white; 
+            padding: 120px 20px; 
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        
+        /* 魂の自己紹介セクション */
+        .intro-text { 
+            background: white; 
+            padding: 40px; 
+            border-radius: 15px; 
+            margin-top: -60px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15); 
+            text-align: left;
+            position: relative;
+        }
+        .intro-text h2 { 
+            color: #b8860b; 
+            border-bottom: 2px solid #b8860b; 
+            padding-bottom: 10px; 
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+        .intro-text p { margin-bottom: 15px; font-size: 1.05em; }
+
+        /* サービス内容 */
+        h2.section-title { border-left: 5px solid #b8860b; padding-left: 15px; color: #2c3e50; text-align: left; margin: 50px 0 20px; }
+        .services { display: flex; flex-wrap: wrap; gap: 15px; }
+        .card { background: white; border-top: 4px solid #b8860b; border-radius: 10px; padding: 20px; flex: 1; min-width: 200px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); text-align: left; }
+        .status { font-size: 0.75em; background: #fdf5e6; padding: 2px 8px; border-radius: 20px; color: #b8860b; border: 1px solid #b8860b; float: right; }
+
+        /* 問い合わせ */
+        .contact-box { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-top: 20px; text-align: left; }
+        .form-group { margin-bottom: 15px; }
+        input, textarea, select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; font-size: 16px; margin-top: 5px; }
+        .btn { display: block; width: 100%; padding: 18px; background: #b8860b; color: white; border: none; border-radius: 50px; text-align: center; font-weight: bold; font-size: 1.1em; cursor: pointer; margin-top: 15px; box-shadow: 0 4px 15px rgba(184, 134, 11, 0.3); }
+        
+        .note-link { display: block; background: #2c3e50; color: white; text-align: center; padding: 15px; text-decoration: none; border-radius: 50px; margin-top: 40px; font-weight: bold; }
+        footer { padding: 60px; color: #888; font-size: 0.9em; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>行政書士タカハシ事務所準備中</h1>
-    <p>〜一度立ち止まったからこそ、誰より誠実に。〜</p>
+    <h1 style="margin:0; font-size: 2.3em;">行政書士タカハシ事務所</h1>
+    <p style="margin:10px 0 0;">〜一度立ち止まったからこそ、誰より誠実に〜</p>
 </header>
 
 <div class="container">
-    <div class="intro">
-       <div class="intro-text">
-            <h2>自己紹介 〜マイナスからの再出発〜</h2>
-            <p>宮城県に生まれ育ちました。</p>
-            <p>私はかつて、営業職を解雇され、その後のネットワークビジネスでも失敗し、多くの方々に多大なご迷惑をかけてしまいました。その事実は一生消すことはできません。</p>
-            <p>どん底にいたあの日、真っ赤な「日の出」を眺めながら私は心に決めました。これからは一切の嘘を捨て、泥をすすってでも誠実に生きると。</p>
-            <p>令和元年度、行政書士試験合格。どん底を味わい、自分の弱さを知っている私だからこそ、悩み苦しむ方の心に寄り添えると信じています。</p>
-        </div>
-
-    <h2>取り扱い予定業務</h2>
-    <div class="services">
-        <div class="card">
-            <h3>農地転用 <span class="status">準備中</span></h3>
-            <p>農振除外や許可申請など、難しい土地の活用について、行政との架け橋になります。</p>
-        </div>
-        <div class="card">
-            <h3>内容証明 <span class="status">準備中</span></h3>
-            <p>トラブル解決の第一歩。あなたの想いと正当な主張を、確かな書面に認（したため）ます。</p>
-        </div>
-        <div class="card">
-            <h3>自動車関連 <span class="status">準備中</span></h3>
-            <p>車庫証明など、迅速かつ確実な手続き代行。地元の皆様の足回りをサポートします。</p>
-        </div>
+    <div class="intro-text">
+        <h2>自己紹介 〜マイナスからの再出発〜</h2>
+        <p>宮城県に生まれ育ちました。</p>
+        <p>私はかつて、営業職を解雇され、その後のネットワークビジネスでも失敗し、多くの方々に多大なご迷惑をかけてしまいました。その事実は一生消すことはできません。</p>
+        <p>どん底にいたあの日、真っ赤な「日の出」を眺めながら私は心に決めました。これからは一切の嘘を捨て、泥をすすってでも誠実に生きると。</p>
+        <p>令和元年度、行政書士試験合格。どん底を味わい、自分の弱さを知っている私だからこそ、悩み苦しむ方の心に寄り添えると信じています。</p>
     </div>
 
-    <a href="https://note.com/ootata1968" class="note-link">日々の奮闘記（note）はこちらから</a>
-<section id="contact" style="margin-top: 60px; background: white; padding: 40px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-        <h2 style="text-align: center; color: #2c3e50; border: none;">お問い合わせ</h2>
-        <p style="text-align: center; color: #666; margin-bottom: 30px;">
-            業務に関するご相談やご質問は、以下のフォームよりお気軽にお送りください。<br>
-            「まだやれるか分からない」といった段階のご相談でも大丈夫だっちゃ。
-        </p>
+    <h2 class="section-title">取り扱い予定業務</h2>
+    <div class="services">
+        <div class="card"><h3>農地転用 <span class="status">準備中</span></h3><p>土地の活用、許可申請手続きなど、地域に寄り添いサポートします。</p></div>
+        <div class="card"><h3>内容証明 <span class="status">準備中</span></h3><p>トラブル回避のための書面作成。あなたの正当な主張を形にします。</p></div>
+        <div class="card"><h3>車庫証明 <span class="status">準備中</span></h3><p>迅速・丁寧な自動車登録代行。お忙しい皆様に代わり申請します。</p></div>
+    </div>
 
-        <form action="https://formspree.io/f/xaqjznor" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
-            <div style="display: flex; flex-direction: column;">
-                <label style="font-weight: bold; margin-bottom: 5px;">お名前</label>
-                <input type="text" name="name" required style="padding: 12px; border: 1px solid #ddd; border-radius: 5px;">
-            </div>
+    <h2 class="section-title">お問い合わせ</h2>
+    <div class="contact-box">
+        <div class="form-group"><label>お名前</label><input type="text" placeholder="例：宮城 太郎"></div>
+        <div class="form-group"><label>相談内容</label>
+            <select>
+                <option>農地転用について</option>
+                <option>内容証明について</option>
+                <option>車庫証明について</option>
+                <option>その他</option>
+            </select>
+        </div>
+        <div class="form-group"><label>メッセージ</label><textarea rows="4" placeholder="ご相談内容を記入してください"></textarea></div>
+        <button class="btn">送信する（現在は準備中）</button>
+    </div>
 
-            <div style="display: flex; flex-direction: column;">
-                <label style="font-weight: bold; margin-bottom: 5px;">メールアドレス</label>
-                <input type="email" name="email" required style="padding: 12px; border: 1px solid #ddd; border-radius: 5px;">
-            </div>
-
-            <div style="display: flex; flex-direction: column;">
-                <label style="font-weight: bold; margin-bottom: 5px;">ご相談内容</label>
-                <select name="subject" style="padding: 12px; border: 1px solid #ddd; border-radius: 5px;">
-                    <option value="農地転用について">農地転用について</option>
-                    <option value="内容証明について">内容証明について</option>
-                    <option value="車庫証明について">車庫証明について</option>
-                    <option value="その他">その他</option>
-                </select>
-            </div>
-
-            <div style="display: flex; flex-direction: column;">
-                <label style="font-weight: bold; margin-bottom: 5px;">メッセージ</label>
-                <textarea name="message" rows="5" required style="padding: 12px; border: 1px solid #ddd; border-radius: 5px;"></textarea>
-            </div>
-
-            <button type="submit" style="background: #e67e22; color: white; padding: 15px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; font-size: 1.1em; transition: 0.3s;">
-                この内容で送信する
-            </button>
-        </form>
-    </section>
+    <a href="https://note.com/ootata1968" class="note-link">日々の奮闘記「note」はこちら</a>
 
     <footer>
         <p>&copy; 2026 行政書士タカハシ事務所 準備室</p>
@@ -109,6 +101,15 @@
 
 </body>
 </html>
+
+        
+   
+    
+            
+        
+                    
+
+   
 
 
 
