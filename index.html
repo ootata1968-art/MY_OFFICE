@@ -63,11 +63,44 @@
     </div>
 
     <a href="https://note.com/ootata1968" class="note-link">日々の奮闘記（note）はこちらから</a>
-<div class="contact-box">
-            <h3>ご相談・お問い合わせ</h3>
-            <p>お困りごとは、まずはこちらからご連絡ください。</p>
-            <a href="mailto:ootata1968@gmail.com" class="btn">タカハシへメールを送る</a>
-        </div>
+<section id="contact" style="margin-top: 60px; background: white; padding: 40px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+        <h2 style="text-align: center; color: #2c3e50; border: none;">お問い合わせ</h2>
+        <p style="text-align: center; color: #666; margin-bottom: 30px;">
+            業務に関するご相談やご質問は、以下のフォームよりお気軽にお送りください。<br>
+            「まだやれるか分からない」といった段階のご相談でも大丈夫だっちゃ。
+        </p>
+
+        <form action="https://formspree.io/f/XXXXX" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+            <div style="display: flex; flex-direction: column;">
+                <label style="font-weight: bold; margin-bottom: 5px;">お名前</label>
+                <input type="text" name="name" required style="padding: 12px; border: 1px solid #ddd; border-radius: 5px;">
+            </div>
+
+            <div style="display: flex; flex-direction: column;">
+                <label style="font-weight: bold; margin-bottom: 5px;">メールアドレス</label>
+                <input type="email" name="email" required style="padding: 12px; border: 1px solid #ddd; border-radius: 5px;">
+            </div>
+
+            <div style="display: flex; flex-direction: column;">
+                <label style="font-weight: bold; margin-bottom: 5px;">ご相談内容</label>
+                <select name="subject" style="padding: 12px; border: 1px solid #ddd; border-radius: 5px;">
+                    <option value="農地転用について">農地転用について</option>
+                    <option value="内容証明について">内容証明について</option>
+                    <option value="車庫証明について">車庫証明について</option>
+                    <option value="その他">その他</option>
+                </select>
+            </div>
+
+            <div style="display: flex; flex-direction: column;">
+                <label style="font-weight: bold; margin-bottom: 5px;">メッセージ</label>
+                <textarea name="message" rows="5" required style="padding: 12px; border: 1px solid #ddd; border-radius: 5px;"></textarea>
+            </div>
+
+            <button type="submit" style="background: #e67e22; color: white; padding: 15px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; font-size: 1.1em; transition: 0.3s;">
+                この内容で送信する
+            </button>
+        </form>
+    </section>
 
     <footer>
         <p>&copy; 2026 行政書士タカハシ事務所 準備室</p>
@@ -76,6 +109,7 @@
 
 </body>
 </html>
+
 
 
 
