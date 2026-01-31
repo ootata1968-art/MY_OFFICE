@@ -7,10 +7,10 @@
     <style>
         body { font-family: 'Helvetica Neue', Arial, sans-serif; line-height: 1.8; color: #333; margin: 0; background-color: #f4f4f4; }
         
-        /* ヘッダー：背景に画像を設定（imgタグを使わないから、一番上の張り付きがなくなるべ） */
+        /* ヘッダー：あの日の出を背景に */
         header { 
             background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-                        url('hinode.jpg') center/cover no-repeat;
+                        url('./hinode.jpg') center/cover no-repeat;
             background-color: #b8860b; 
             color: white; 
             padding: 100px 20px; 
@@ -20,7 +20,7 @@
 
         .container { max-width: 800px; margin: 0 auto; padding: 20px; }
         
-        /* 自己紹介：ここが一番大事だっちゃ */
+        /* 自己紹介セクション */
         .intro-text { 
             background: white; 
             padding: 40px; 
@@ -28,21 +28,29 @@
             margin-top: -50px; 
             box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
             text-align: left;
-            position: relative;
         }
         .intro-text h2 { color: #b8860b; border-bottom: 2px solid #b8860b; padding-bottom: 10px; margin-top: 0; }
-        
-        /* サービス内容 */
-        .section-title { border-left: 5px solid #b8860b; padding-left: 15px; color: #2c3e50; text-align: left; margin: 50px 0 20px; }
+        .intro-text p { margin-bottom: 15px; }
+
+        /* サービス案内 */
+        .section-title { border-left: 5px solid #b8860b; padding-left: 15px; color: #2c3e50; text-align: left; margin: 50px 0 20px; font-size: 1.5em; }
         .services { display: flex; flex-wrap: wrap; gap: 15px; }
         .card { background: white; border-top: 4px solid #b8860b; border-radius: 10px; padding: 20px; flex: 1; min-width: 200px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); text-align: left; }
         .status { font-size: 0.75em; background: #fdf5e6; padding: 2px 8px; border-radius: 20px; color: #b8860b; border: 1px solid #b8860b; float: right; }
 
-        /* 問い合わせ */
+        /* お問い合わせフォーム */
         .contact-box { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-top: 20px; text-align: left; }
-        .btn { display: block; width: 100%; padding: 18px; background: #b8860b; color: white; border: none; border-radius: 50px; text-align: center; font-weight: bold; font-size: 1.1em; cursor: pointer; margin-top: 15px; box-shadow: 0 4px 15px rgba(184, 134, 11, 0.3); text-decoration: none; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; font-weight: bold; margin-bottom: 5px; color: #555; }
+        input, textarea, select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box; font-size: 16px; background: #fafafa; }
         
-        footer { padding: 60px; text-align: center; color: #888; font-size: 0.9em; }
+        /* 送信ボタン（オレンジ系で目立たせるべ） */
+        .submit-btn { display: block; width: 100%; padding: 18px; background: #e67e22; color: white; border: none; border-radius: 50px; text-align: center; font-weight: bold; font-size: 1.1em; cursor: pointer; margin-top: 20px; box-shadow: 0 4px 15px rgba(230,126,34,0.3); }
+        
+        /* noteへのリンク */
+        .note-link { display: block; background: #2c3e50; color: white; text-align: center; padding: 15px; text-decoration: none; border-radius: 50px; margin-top: 40px; font-weight: bold; }
+        
+        footer { padding: 60px; text-align: center; color: #888; font-size: 0.8em; }
     </style>
 </head>
 <body>
@@ -70,9 +78,34 @@
 
     <h2 class="section-title">お問い合わせ</h2>
     <div class="contact-box">
-        <p style="font-size: 0.9em; color: #666; margin-bottom: 20px;">※現在は準備中のため、正式な受付はnoteまたは後日公開のフォームにて承ります。</p>
-        <a href="https://note.com/ootata1968" class="btn">私の想いを綴った note を見る</a>
+        <form action="https://formspree.io/f/XXXXX" method="POST">
+            <div class="form-group">
+                <label>お名前</label>
+                <input type="text" name="name" required placeholder="例：宮城 太郎">
+            </div>
+            <div class="form-group">
+                <label>メールアドレス</label>
+                <input type="email" name="email" required placeholder="example@mail.com">
+            </div>
+            <div class="form-group">
+                <label>相談内容</label>
+                <select name="subject">
+                    <option value="農地転用">農地転用について</option>
+                    <option value="内容証明">内容証明について</option>
+                    <option value="車庫証明">車庫証明について</option>
+                    <option value="その他">その他</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>メッセージ</label>
+                <textarea name="message" rows="5" required placeholder="ご相談内容を記入してください"></textarea>
+            </div>
+            <button type="submit" class="submit-btn">この内容で送信する</button>
+            <p style="font-size: 0.8em; color: #999; margin-top: 10px; text-align: center;">※現在は準備中のため、送信テスト用です。</p>
+        </form>
     </div>
+
+    <a href="https://note.com/ootata1968" class="note-link">私の想いを綴った note はこちら</a>
 
     <footer>
         <p>&copy; 2026 行政書士タカハシ事務所 準備室</p>
@@ -81,7 +114,13 @@
 
 </body>
 </html>
-       
+
+        
+
+
+
+    
+   
       
 
 
@@ -97,6 +136,7 @@
                     
 
    
+
 
 
 
